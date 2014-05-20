@@ -13,7 +13,6 @@
 	#-set the value of the inverse
 	#-get the value of the inverse
 
-
 makeCacheMatrix <- function(x = matrix()) {
 
 	  #Let's check if we have correct input
@@ -44,6 +43,7 @@ makeCacheMatrix <- function(x = matrix()) {
 #####################################################################################
 # Function cacheSolve: Compute the inverse of the matrix. If the inverse is already
 # calculated before, it returns the cached inverse.
+
 cacheSolve <- function(x, ...) {
         m <- x$getinv()
         if(!is.null(m)) {
