@@ -1,7 +1,7 @@
 #Example usage:
 #x <- matrix(c(1,2,3,4),nrow=2,ncol=2)    	#Create a squared matrix x
 #Xcache <- makeCacheMatrix(x)                   #Create our special matrix
-#cx$get()                                       #Return the matrix
+#Xcache$get()                                       #Return the matrix
 #cacheSolve(Xcache)                          	#Return the inverse
 #cacheSolve(Xcache)                             #Call the 2nd time, so return
 
