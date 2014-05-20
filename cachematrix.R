@@ -1,9 +1,9 @@
 #Example usage:
 #x <- matrix(c(1,2,3,4),nrow=2,ncol=2)    	#Create a squared matrix x
-#cx <- makeCacheMatrix(x)                  #Create our special matrix
-#cx$get()                                  #Return the matrix
-#cacheSolve(cx)                          	#Return the inverse
-#cacheSolve(cx)                            #Call the 2nd time, so return
+#Xcache <- makeCacheMatrix(x)                   #Create our special matrix
+#cx$get()                                       #Return the matrix
+#cacheSolve(Xcache)                          	#Return the inverse
+#cacheSolve(Xcache)                             #Call the 2nd time, so return
 
 
 #####################################################################################
@@ -14,15 +14,14 @@
 	#-get the value of the inverse
 
 makeCacheMatrix <- function(x = matrix()) {
-
 	  #Let's check if we have correct input
 	    if (!is.matrix(x)) {
    		stop("Please give a matrix")
   		}
+  		
 		np<-dim(x)
 		n<-np[1]
 		p<-np[2]
-
 	    if (n!=p) {
    		stop("Please give a squared matrix")
   		}
